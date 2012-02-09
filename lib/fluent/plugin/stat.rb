@@ -27,6 +27,8 @@ class Stat
         }
       end
     end
+    cpu_num = hash.keys.grep(/^cpu\d+/).length
+    hash[:cpu].each { |k, v| hash[:cpu][k] = (v/cpu_num).round }
     return hash
   end
   
@@ -65,7 +67,7 @@ class Stat
     hash = Hash.new
     IO.readlines('/proc/diskstats').each do |line|
       info = line.split
-      unless info[2] =~ /^ram/
+      unless info[2] =~ /^(ram|loop)/
         hash[info[2].to_sym] = {
           :rio => info[3].to_i,
           :rmerge => info[4].to_i,
