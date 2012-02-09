@@ -10,7 +10,7 @@ module Fluent
       require 'stat'
     end
 
-    config_param :tag, :string
+    config_param :add_prefix, :string
     config_param :interval, :time
 
     def configure(conf)
@@ -28,11 +28,23 @@ module Fluent
       @running = true
       while @running
         result = stat.calc_difference(@interval)
-        record = {
-          'hostname' => @hostname,
-          'stats' => result
+        logs = Hash.new
+        result.each { |k1, v1|
+          if k1 == :mem
+            logs[k1.to_s] = v1
+          else
+            v1.each { |k2, v2|
+              if k1 == :cpu and k2 == :cpu
+                logs[k2.to_s] = v2
+              else
+                logs[k1.to_s+'.'+k2.to_s] = v2
+              end
+            }
+          end
         }
-        Engine.emit(@tag,  Engine.now, record)
+        logs.each { |tag, record|
+          Engine.emit(@add_prefix+'.'+tag, Engine.now, record)
+        }
       end      
     end
 
