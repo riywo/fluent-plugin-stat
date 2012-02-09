@@ -17,3 +17,21 @@
 <match aggregated.**>
   type stdout
 </match>
+
+-----------------------------------------------------------------
+
+2012-02-10 03:09:02 +0900 debug.stat.host1.cpu: {"user":0,"nice":0,"system":0,"idle":100,"iowait":0,"irq":0,"softirq":0,"steal":0,"guest":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.cpu.cpu0: {"user":0,"nice":0,"system":0,"idle":100,"iowait":0,"irq":0,"softirq":0,"steal":0,"guest":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.cpu.cpu1: {"user":0,"nice":0,"system":1,"idle":100,"iowait":0,"irq":0,"softirq":0,"steal":0,"guest":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.cpu.cpu2: {"user":0,"nice":0,"system":0,"idle":100,"iowait":0,"irq":0,"softirq":0,"steal":0,"guest":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.cpu.cpu3: {"user":0,"nice":0,"system":0,"idle":101,"iowait":0,"irq":0,"softirq":0,"steal":0,"guest":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.net.eth0: {"rbytes":4702,"rpackets":77,"rerrs":0,"rdrop":0,"rfifo":0,"rframe":0,"rcompressed":0,"rmulticast":0,"tbytes":3650,"tpackets":15,"terrs":0,"tdrop":0,"tfifo":0,"tcolls":0,"tcarrier":0,"tcompressed":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.disk.xvda: {"rio":0,"rmerge":0,"rsect":0,"ruse":0,"wio":0,"wmerge":0,"wsect":0,"wuse":0,"running":0,"use":0,"aveq":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.disk.xvda1: {"rio":0,"rmerge":0,"rsect":0,"ruse":0,"wio":0,"wmerge":0,"wsect":0,"wuse":0,"running":0,"use":0,"aveq":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.disk.xvda2: {"rio":0,"rmerge":0,"rsect":0,"ruse":0,"wio":0,"wmerge":0,"wsect":0,"wuse":0,"running":0,"use":0,"aveq":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.disk.md0: {"rio":0,"rmerge":0,"rsect":0,"ruse":0,"wio":0,"wmerge":0,"wsect":0,"wuse":0,"running":0,"use":0,"aveq":0}
+2012-02-10 03:09:02 +0900 debug.stat.host1.mem: {"MemTotal":2095104,"MemFree":317048,"Buffers":235624,"Cached":820504,"SwapCached":28780,"Active":1062792,"Inactive":463700,"HighTotal":0,"HighFree":0,"LowTotal":2095104,"LowFree":317048,"SwapTotal":4192956,"SwapFree":4126856,"Dirty":152,"Writeback":0,"AnonPages":464056,"Mapped":35348,"Slab":162512,"PageTables":14324,"NFS_Unstable":0,"Bounce":0,"CommitLimit":5240508,"Committed_AS":1996840,"VmallocTotal":34359738367,"VmallocUsed":2272,"VmallocChunk":34359736095}
+
+2012-02-10 03:08:00 +0900 aggregated.debug.stat.host1.cpu: {"user":{"num":32,"min":0,"max":2,"pct95":2,"sum":13.0,"avg":0.40625,"var":0.4287109375},"nice":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0},"system":{"num":32,"min":0,"max":1,"pct95":1,"sum":11.0,"avg":0.34375,"var":0.2255859375},"idle":{"num":32,"min":97,"max":101,"pct95":101,"sum":3193.0,"avg":99.78125,"var":1.2333984375},"iowait":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0},"irq":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0},"softirq":{"num":32,"min":0,"max":1,"pct95":0,"sum":1.0,"avg":0.03125,"var":0.0302734375},"steal":{"num":32,"min":0,"max":1,"pct95":0,"sum":1.0,"avg":0.03125,"var":0.0302734375},"guest":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0}}
+2012-02-10 03:08:00 +0900 aggregated.debug.stat.host1.cpu.cpu0: {"user":{"num":32,"min":0,"max":2,"pct95":1,"sum":6.0,"avg":0.1875,"var":0.21484375},"nice":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0},"system":{"num":32,"min":0,"max":2,"pct95":1,"sum":19.0,"avg":0.59375,"var":0.3037109375},"idle":{"num":32,"min":97,"max":103,"pct95":101,"sum":3190.0,"avg":99.6875,"var":1.52734375},"iowait":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0},"irq":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0},"softirq":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0},"steal":{"num":32,"min":0,"max":1,"pct95":0,"sum":2.0,"avg":0.0625,"var":0.05859375},"guest":{"num":32,"min":0,"max":0,"pct95":0,"sum":0.0,"avg":0.0,"var":0.0}}
+...
