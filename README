@@ -1,0 +1,19 @@
+<source>
+  type stat
+  add_prefix debug.stat
+  interval 1s
+</source>
+
+<match debug.**>
+  type copy
+  <store>
+    type aggregate_filter
+  </store>
+  <store>
+    type stdout
+  </store>
+</match>
+
+<match aggregated.**>
+  type stdout
+</match>
